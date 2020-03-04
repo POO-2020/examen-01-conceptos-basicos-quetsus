@@ -5,9 +5,9 @@ export default class Reservacion {
      * @param {number} numeroHabitacion 
      * @param {number} noches  
      */
-    constructor(numeroHabitacion, noches){
+    constructor(numeroHabitacion, noches, año, mes, dia){
         this.numeroHabitacion = numeroHabitacion;
-        this.fechaLlegada = new Date;
+        this.fechaLlegada = new Date(año, mes-1, dia);
         this.noches = noches;
         this.huespedes = new Array ();
     }
